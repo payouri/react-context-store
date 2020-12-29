@@ -1,6 +1,6 @@
 {
   "name": "@youri-kane/react-context-store",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.jsx",
   "scripts": {
