@@ -1,13 +1,13 @@
 {
-  "name": "src",
+  "name": "@youri-kane/react-context-store",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/index.jsx",
   "scripts": {
-    "prepublish": "tsc",
+    "prepare": "tsc .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "types": "index.d.ts",
+  "types": "dist/index.d.ts",
   "keywords": [],
   "author": "",
   "license": "ISC",
