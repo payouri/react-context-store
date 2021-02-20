@@ -5,16 +5,18 @@
   "main": "dist/index.jsx",
   "scripts": {
     "prepare": "tsc .",
+    "publish-package": "npm version patch && npm publish --public-access",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "types": "dist/index.d.ts",
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "peer-dependencies": {
     "react": "^17.0.1"
   },
   "devDependencies": {
-    "@types/react": "^17.0.0"
+    "@types/react": "^17.0.1",
+    "react": "^17.0.1"
   }
 }

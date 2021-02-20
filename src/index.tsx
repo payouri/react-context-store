@@ -8,22 +8,9 @@ import React, {
   Dispatch,
   useContext,
   ReactNode,
+  useMemo,
 } from "react";
-
-export interface ContextStoreAction {
-  type: string;
-  payload: any;
-}
-
-export interface StoreInit<
-  S extends { [key in string | number | symbol]: any },
-  A extends ContextStoreAction
-> {
-  namespace: string;
-  initState: S;
-  reducer: Reducer<S, A>;
-}
-
+import { ContextStoreAction, StoreInit } from "./types";
 interface ContextStoreProviderProps<
   S extends { [key in string | number | symbol]: any },
   A extends ContextStoreAction
@@ -67,7 +54,7 @@ export function createContextStore<
   });
   context.displayName = namespace;
   return {
-    useStoreContext: () => useContext(context),
+    useStoreContext: () => useMemo(() => useContext(context), [context]),
     StoreConsumer: context.Consumer,
     StoreProvider: ({ children }: { children: ReactNode | ReactNode[] }) => {
       return (
